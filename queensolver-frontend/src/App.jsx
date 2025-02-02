@@ -9,9 +9,9 @@ const colorToNameMapping = {
    "B": "#96BDFE", // Soft Blue
    "W": "#DFDFDF", // Soft Gray
    "C": "#E6F389", // Lime Green
-   "P": "#AF7AC5", // Elegant Pink
+   "P": "#DFA0BF", // Elegant Pink
    "R": "#FE7B5F", // Soft Red
-   "E": "#F5F5DC", // Beige
+   "E": "#B9B29F", // Beige
    "L": "#A52A2A", // Velvet Brown
    "": "#3A3A4A"  // Default color
 };

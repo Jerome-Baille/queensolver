@@ -20,7 +20,6 @@ body {
 
 .board-container {
   width: 100%;
-  padding: 0 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -76,12 +75,12 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.solve-button {
+.solve-button, .save-button {
   background-color: #6200ea;
   color: white;
 }
 
-.solve-button:hover {
+.solve-button:hover, .save-button:hover {
   background-color: #3700b3;
 }
 
@@ -99,7 +98,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  padding: 15px;
+  padding: 15px 0;
   max-width: 100%;
   align-items: center;
 }
@@ -199,4 +198,81 @@ button:hover {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.config-panel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  color: #000;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  z-index: 1100;
+}
+
+.config-item {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+/* New: Flex container for save/load buttons */
+.config-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Material Design inspired form field styling for config panel */
+.md-form-field {
+   position: relative;
+   margin-bottom: 16px;
+   width: 100%;
+}
+
+.md-label {
+   font-size: 14px;
+   color: #666;
+   position: absolute;
+   top: -8px;
+   left: 12px;
+   background: #fff;
+   padding: 0 4px;
+}
+
+.md-input {
+   width: 100%;
+   padding: 12px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   outline: none;
+   transition: border-color 0.2s;
+}
+
+.md-input:focus {
+   border-color: #6200ee;
+}
+
+input[type="date"] {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.config-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

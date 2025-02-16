@@ -13,6 +13,8 @@ const colorToNameMapping = {
    "R": "#FE7B5F", // Soft Red
    "E": "#B9B29F", // Beige
    "L": "#A52A2A", // Velvet Brown
+   "A": "#A3D2D8", // Light Blue
+   "T": "#62EFE9", // Turquoise
    "": "#3A3A4A"  // Default color
 };
 
@@ -176,7 +178,7 @@ function App() {
                </div>
             </div>
             <div className="color-buttons">
-               {["V", "O", "G", "B", "W", "C", "P", "R", "E", "L"].map(colorKey => (
+               {["V", "O", "G", "B", "W", "C", "P", "R", "E", "L", "A", "T"].map(colorKey => (
                   <button
                      key={colorKey}
                      className={`color-button ${currentColor === colorKey ? 'selected' : ''}`}
